@@ -26,7 +26,6 @@ void Ajout_action(Solution *S, char a){
   if (a!='S') S->cptr_pas++;
 }
 
-
 void Affiche(Solution *S){
   Cell_char *cour=S->prem;
   printf("Nombre de pas: %d\n",S->cptr_pas);

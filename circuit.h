@@ -33,4 +33,6 @@ void afficher_Lcircuit(Lcircuit *Lc);
 
 void Graphe_Rec_Circuit(Graphe *H, Lcircuit *Lc);
 
+void CalculJminJmax(Lcircuit *LC);
 
+void CalculJminJmaxxx(Lcircuit *LC);

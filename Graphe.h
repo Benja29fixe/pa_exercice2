@@ -16,7 +16,6 @@ struct sommet{
   int visit;
 };
 
-
 typedef struct{
   int n,m;
   Sommet *** Tsom;

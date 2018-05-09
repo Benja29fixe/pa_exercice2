@@ -3,7 +3,10 @@
 #include"ListeDC.h"
 #include<stdio.h>
 
-
+/*
+ * Initialisation d'un graphe.
+ * visit = -1
+ */
 void Graphe_init(Graphe *H, int m, int n){
   int i,j;
 
@@ -24,10 +27,11 @@ void Graphe_init(Graphe *H, int m, int n){
       H->Tsom[i][j]->Lsucc=NULL;
       H->Tsom[i][j]->visit=-1;
     }
-  
-
 }
 
+/*
+ * Ajout d'un arc dans un graphe
+ */
 void Graphe_ajout_arc(Graphe *H, int i1, int j1, int i2, int j2){
   Arc *a=(Arc*) malloc(sizeof(Arc));
   a->succ=H->Tsom[i2][j2];
@@ -35,7 +39,9 @@ void Graphe_ajout_arc(Graphe *H, int i1, int j1, int i2, int j2){
   H->Tsom[i1][j1]->Lsucc=a;  
 }
 
-
+/*
+ * Création d'un graphe, a partir d'une grille
+ */
 void Graphe_creation(Grille *G, Graphe *H){
 
   int i,j,k;
@@ -63,11 +69,12 @@ void Graphe_creation(Grille *G, Graphe *H){
   }
   
   for (k=0;k<G->nbcoul;k++)
-    LDCdesalloue(&(TC[k]));
-      
+    LDCdesalloue(&(TC[k]));     
 }
 
-
+/*
+ * Affichage d'un graphe
+ */
 void Graphe_affiche(Graphe *H){
   int i,j;
   Arc *cour;
@@ -87,8 +94,5 @@ void Graphe_affiche(Graphe *H){
 	}
 	printf("\n");
       }
-
     }
-
-
 }

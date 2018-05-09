@@ -26,11 +26,8 @@ int main(int argc,char**argv){
   Lcircuit Lc;
 
   LDCInitialise(&liste);
-  
-  
 
-  /* les différents arguments */
-  
+  /* les différents arguments */  
   if(argc!=5){
     printf("usage: %s <nb_lignes> <nb_colonnes> <nb_couleur> <graine> \n",argv[0]);
     return 1;
@@ -38,8 +35,6 @@ int main(int argc,char**argv){
 
   G.m=atoi(argv[1]);
   G.n=atoi(argv[2]);
-
- 
   
   if (G.m>G.n){
     printf("Il doit y avoir plus de colonnes que de lignes.\n");
@@ -63,99 +58,22 @@ int main(int argc,char**argv){
   Graphe_creation(&G, &H);
   Graphe_affiche(&H);
 
-  /*
-  init_sommet(&H);
-  affiche_visit(&H);
- 
-  printf("\n");
-
-recherche_circuit(&H, &liste, 0, 0);
-  LDCafficher(&liste);
-
-  
- init_zero(&H);
-  affiche_visit(&H);
-printf("\n");
- 
-  LDCInitialise(&liste);
-  init_sommet(&H);
-  affiche_visit(&H);
-printf("\n");
- 
-  recherche_circuit(&H, &liste, 0, 1);
-  LDCafficher(&liste);
-  
-  /*
-  
-  recherche_circuit(&H, &liste, 0, 3);
-  LDCafficher(&liste);
-printf("Vide : %d\n", LDCVide(&liste));
- 
-  
-   
-
-    printf("Vide : %d\n", LDCVide(&liste2));
-    
-    recherche_circuit(&H, &liste2, 0, 4);
-  LDCafficher(&liste2);
-  
-  
-
-  initialiser_Lcircuit(&Lc);
-  /*
-  afficher_Lcircuit(&Lc);
-
-  printf("1/ Verification si liste est vide : %d. \n", Lcircuit_Vide(&Lc));
-
-  Cell_circuit *c1=creer_cellule(&liste);
-
-  ajouter_cellule(&Lc, c1);
-  printf("---- c1 ---\n");
-   afficher_Lcircuit(&Lc);
-  
-
-    recherche_circuit(&H, &liste1, 0, 1);
-    printf("---- c2 ---\n");
- LDCafficher(&liste1);
- 
-    Cell_circuit *c2=creer_cellule(&liste1);
-
-  ajouter_cellule(&Lc, c2);
-
-  printf("---- aff du circuit : ---\n");
-   afficher_Lcircuit(&Lc);
-  */
-  
-     printf("---- fonction Liste des circuits : ---\n");
-     
+  /* Initialisation et affichage des tous les circuits */
+  printf("\n---- fonction Liste des circuits : ---\n");     
   Graphe_Rec_Circuit(&H, &Lc);
-
   afficher_Lcircuit(&Lc);
 
-  /*********
-  initialiser_Lcircuit(&Lc);
-    afficher_Lcircuit(&Lc);
-    
-      init_zero(&H);
-      init_sommet(&H);
-      recherche_circuit(&H, &liste, 0, 0);    
-      Cell_circuit *cel_cir=creer_cellule(&liste);
-      ajouter_cellule(&Lc, cel_cir);
-        afficher_Lcircuit(&Lc);
+  printf("\n++++++Valeur test : [%d, %d]\n", Lc.premier->L->premier->i, Lc.premier->L->premier->j);
 
-	
-      LDCInitialise(&liste1);
-      init_zero(&H);
-      init_sommet(&H);
-      recherche_circuit(&H, &liste1, 0, 1);    
+printf("\n++++++Nbre de circuit : %d\n", Lc.nb_circuit);
 
-      Cell_circuit *cel_cir1=creer_cellule(&liste1);
+  
+    CalculJminJmaxxx(&Lc);
 
-      ajouter_cellule(&Lc, cel_cir1);
   afficher_Lcircuit(&Lc);
-  */
+  
+  
   return 0;
-
 }
 
    

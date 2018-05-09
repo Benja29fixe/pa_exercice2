@@ -9,7 +9,6 @@ CelluleLDC* creerCelluleLDC(int i, int j){
   e->i=i;
   e->j=j;
   return e;
-
 }
 
 void LDCInitialise(LDC *ldc){
@@ -35,7 +34,6 @@ void LDCInsererEnTete(LDC* ldc, int i, int j)
   nouv->suiv=ldc->premier;
   ldc->premier=nouv;
 }
-
 
 void LDCInsererEnFin(LDC* ldc, int i, int j){
   CelluleLDC* nouv=creerCelluleLDC(i,j);
