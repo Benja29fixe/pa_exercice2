@@ -147,7 +147,8 @@ void afficher_Lcircuit(Lcircuit *Lc)
   while(temp){
     LDCafficher(temp->L);
 
-    printf("Valeur jmin, jmax : [%d, %d]\n", temp->jmin, temp->jmax);
+    printf("Valeur jmin : %d, valeur jmax : %d\n", temp->jmin, temp->jmax);
+    printf("----------------------\n");
    
 
     temp=temp->suiv;
@@ -162,19 +163,22 @@ void Graphe_Rec_Circuit(Graphe *H, Lcircuit *Lc)
 {
   int i, j;
   initialiser_Lcircuit(Lc);
-  LDC *liste=(LDC*)malloc((H->m)*(H->n)*sizeof(LDC));
+
   
   for(i=0; i<H->m; i++){
     for(j=0; j<H->n; j++){
      
-      LDCInitialise(&liste[i*(H->m)*(H->n)+j]);
-      init_zero(H);
-      init_sommet(H);
+      /* 
+	 init_zero(H);
+	 init_sommet(H);*/
 
       if(H->Tsom[i][j]->visit==-1){
-	recherche_circuit(H, &liste[i*(H->m)*(H->n)+j], i, j);    
 
-	Cell_circuit *cel_cir=creer_cellule(&liste[i*(H->m)*(H->n)+j]);
+	LDC *liste=(LDC*)malloc(sizeof(LDC));
+	LDCInitialise(liste);
+	recherche_circuit(H, liste, i, j);    
+
+	Cell_circuit *cel_cir=creer_cellule(liste);
 	ajouter_cellule(Lc, cel_cir);
       }     
     }
@@ -183,65 +187,33 @@ void Graphe_Rec_Circuit(Graphe *H, Lcircuit *Lc)
 }
 
 /*
- *
+ * Calcul de jmin, jmax 
+ * réalisé en 2 fonctions
  */
-void CalculJminJmax(Lcircuit *LC)
-{
-  Cell_circuit *cel=LC->premier;
+void CalculJminJmaxCEL(Cell_circuit *Cir){
+  int i,jmaxx;
+  int jminn=Cir->L->premier->j;
+  CelluleLDC *cel=Cir->L->premier;
 
-  while(cel){
-    cel->jmin=cel->L->premier->j;
-    cel->jmax=cel->L->dernier->j;
+  Cir->jmin=jminn;
+  jmaxx=Cir->L->dernier->j;
 
+  while ( cel!=Cir->L->dernier){
+    if(cel->j>jmaxx){
+      jmaxx=cel->j;
+    }
+
+    Cir->jmax=jmaxx;
     cel=cel->suiv;
   }
 }
 
-/*
- *
- */
-void CalculJminJmaxxx(Lcircuit *LC)
-{
-  int i=0;
-  int j=0;
-
-  int *temp_min=(int *)malloc(LC->nb_circuit*sizeof(int));
-  int *temp_max=(int *)malloc(LC->nb_circuit*sizeof(int));
-
-  for(j=0; j<LC->nb_circuit; j++){
-    temp_min[j]=LC->nb_circuit;
-    temp_max[j]=0;
-  }
-
-  Cell_circuit *cel=LC->premier;
-
-  
-  //  for(i=0; i<LC->nb_circuit; i++){
-  
-    while(cel){
-
-         CelluleLDC *celd=LC->premier->L->premier;
-      while(celd){
-      
-	if(celd->j<temp_min[i]){
-	  LC->premier->jmin=celd->j;
-	  temp_min[i]=celd->j;
-	  printf("\nt min : %d\n", temp_min[i]); 
-	}
-
-	if(celd->j>temp_max[i]){
-	  LC->premier->jmax=celd->j;
-	  temp_max[i]=celd->j;
-	  printf("\nt max : %d\n", temp_max[i]); 
-	}
-	celd=celd->suiv;
-      }
+void CalculJminJmax(Lcircuit *LC){
+  Cell_circuit *tmp= LC->premier;
     
-      printf("\ntemp_min[%d]: %d / temp_max[%d]: %d\n", i, temp_min[i], i, temp_max[i]);
-      cel=cel->suiv;
-      i++;
-    }
-  
+  while (tmp){
+    CalculJminJmaxCEL(tmp);
+    tmp=tmp->suiv;
+  }
 }
-
 

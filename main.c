@@ -63,17 +63,14 @@ int main(int argc,char**argv){
   Graphe_Rec_Circuit(&H, &Lc);
   afficher_Lcircuit(&Lc);
 
-  printf("\n++++++Valeur test : [%d, %d]\n", Lc.premier->L->premier->i, Lc.premier->L->premier->j);
-
 printf("\n++++++Nbre de circuit : %d\n", Lc.nb_circuit);
 
+ CalculJminJmax(&Lc);
+ 
+ afficher_Lcircuit(&Lc);
   
-    CalculJminJmaxxx(&Lc);
-
-  afficher_Lcircuit(&Lc);
   
-  
-  return 0;
+ return 0;
 }
 
    

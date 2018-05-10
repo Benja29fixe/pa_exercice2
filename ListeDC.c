@@ -69,7 +69,7 @@ void LDCenleverCellule(LDC* ldc, CelluleLDC* c){
 }
 
 void LDCafficher(LDC* ldc){
-  printf("Liste : ");
+  printf("Circuit : ");
 
   CelluleLDC* cour= ldc->premier;
 
