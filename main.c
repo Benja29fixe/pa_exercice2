@@ -10,7 +10,6 @@
 #include "API_AffGrille.h"
 #include "circuit.h"
 
-
 int main(int argc,char**argv){
 
   Graphe H;
@@ -24,7 +23,11 @@ int main(int argc,char**argv){
   LDC ldc;
   LDC liste, liste1;
   Lcircuit Lc;
-
+  clock_t temps_initial;
+  clock_t temps_final;
+  double temps_cpu;
+  FILE *f1;
+ 
   LDCInitialise(&liste);
 
   /* les différents arguments */  
@@ -59,18 +62,42 @@ int main(int argc,char**argv){
   Graphe_affiche(&H);
 
   /* Initialisation et affichage des tous les circuits */
-  printf("\n---- fonction Liste des circuits : ---\n");     
+  printf("\nAffichage des circuits : ");
+  printf("\n========================\n");     
   Graphe_Rec_Circuit(&H, &Lc);
   afficher_Lcircuit(&Lc);
 
-printf("\n++++++Nbre de circuit : %d\n", Lc.nb_circuit);
+  printf("\nNbre de circuit : %d", Lc.nb_circuit);
+  printf("\n====================\n");
 
- CalculJminJmax(&Lc);
- 
- afficher_Lcircuit(&Lc);
+  CalculJminJmax(&Lc);
+
+  printf("\nAffichage des circuits (avec jmin, jmax) : ");
+  printf("\n==========================================\n");
+  afficher_Lcircuit_jmin_jmax(&Lc);
+
+  printf("\nAlgorithme de Graf : ");
+  printf("\n===================\n");
+
+    /*******************************/
+      f1=fopen("temps/algo_graf.temps", "a");
+      /*******************************/
+      /* Execution de l'algorithme naif */
+       /*******************************/
+      temps_initial=clock();
+      /*******************************/
+      
+  algorithme_circuit_CasLigne1x1(&G, &S);
+
+    /*******************************/
+ temps_final=clock();
+      temps_cpu =((double)(temps_final-temps_initial))/ CLOCKS_PER_SEC;
+      fprintf(f1, "%d %d %d %f\n", G.m, G.n, G.nbcoul, temps_cpu);
+      fclose(f1);
   
+  Affiche(&S);
   
- return 0;
+  return 0;
 }
 
    

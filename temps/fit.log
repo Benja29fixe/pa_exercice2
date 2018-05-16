@@ -1,0 +1,343 @@
+
+
+*******************************************************************************
+Tue May 15 10:41:04 2018
+
+
+FIT:    data read from "algo_graf.temps" using 2:4
+        format = x:z
+        #datapoints = 425
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.38126e+17       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.85351e+07
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.404571
+rel. change during last iteration : -2.0626e-08
+
+degrees of freedom    (FIT_NDF)                        : 422
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0309629
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000958699
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.89182e-08      +/- 1.861e-10    (0.9837%)
+b               = -1.10421e-06     +/- 1.916e-06    (173.5%)
+c               = 0.00564472       +/- 0.003135     (55.55%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.958  1.000 
+c               0.729 -0.838  1.000 
+
+
+*******************************************************************************
+Tue May 15 10:50:31 2018
+
+
+FIT:    data read from "algo_graf.temps" using 2:4
+        format = x:z
+        #datapoints = 425
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.38126e+17       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.85351e+07
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.404571
+rel. change during last iteration : -2.0626e-08
+
+degrees of freedom    (FIT_NDF)                        : 422
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0309629
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000958699
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.89182e-08      +/- 1.861e-10    (0.9837%)
+b               = -1.10421e-06     +/- 1.916e-06    (173.5%)
+c               = 0.00564472       +/- 0.003135     (55.55%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.958  1.000 
+c               0.729 -0.838  1.000 
+
+
+*******************************************************************************
+Tue May 15 10:51:49 2018
+
+
+FIT:    data read from "algo_graf.temps" using 2:4
+        format = x:z
+        #datapoints = 425
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.38126e+17       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.85351e+07
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.404571
+rel. change during last iteration : -2.0626e-08
+
+degrees of freedom    (FIT_NDF)                        : 422
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0309629
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000958699
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.89182e-08      +/- 1.861e-10    (0.9837%)
+b               = -1.10421e-06     +/- 1.916e-06    (173.5%)
+c               = 0.00564472       +/- 0.003135     (55.55%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.958  1.000 
+c               0.729 -0.838  1.000 
+
+
+*******************************************************************************
+Tue May 15 10:53:25 2018
+
+
+FIT:    data read from "algo_graf.temps" using 2:4
+        format = x:z
+        #datapoints = 425
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.38126e+17       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.85351e+07
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.404571
+rel. change during last iteration : -2.0626e-08
+
+degrees of freedom    (FIT_NDF)                        : 422
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0309629
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000958699
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.89182e-08      +/- 1.861e-10    (0.9837%)
+b               = -1.10421e-06     +/- 1.916e-06    (173.5%)
+c               = 0.00564472       +/- 0.003135     (55.55%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.958  1.000 
+c               0.729 -0.838  1.000 
+
+
+*******************************************************************************
+Tue May 15 10:59:51 2018
+
+
+FIT:    data read from "algo_graf.temps" using 2:4
+        format = x:z
+        #datapoints = 425
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.38126e+17       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.85351e+07
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.404571
+rel. change during last iteration : -2.0626e-08
+
+degrees of freedom    (FIT_NDF)                        : 422
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0309629
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000958699
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.89182e-08      +/- 1.861e-10    (0.9837%)
+b               = -1.10421e-06     +/- 1.916e-06    (173.5%)
+c               = 0.00564472       +/- 0.003135     (55.55%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.958  1.000 
+c               0.729 -0.838  1.000 
+
+
+*******************************************************************************
+Tue May 15 11:02:07 2018
+
+
+FIT:    data read from "algo_graf.temps" using 2:4
+        format = x:z
+        #datapoints = 425
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.38126e+17       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.85351e+07
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.404571
+rel. change during last iteration : -2.0626e-08
+
+degrees of freedom    (FIT_NDF)                        : 422
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0309629
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000958699
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.89182e-08      +/- 1.861e-10    (0.9837%)
+b               = -1.10421e-06     +/- 1.916e-06    (173.5%)
+c               = 0.00564472       +/- 0.003135     (55.55%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.958  1.000 
+c               0.729 -0.838  1.000 
+
+
+*******************************************************************************
+Tue May 15 11:02:57 2018
+
+
+FIT:    data read from "algo_graf.temps" using 2:4
+        format = x:z
+        #datapoints = 425
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.38126e+17       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.85351e+07
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.404571
+rel. change during last iteration : -2.0626e-08
+
+degrees of freedom    (FIT_NDF)                        : 422
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0309629
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000958699
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.89182e-08      +/- 1.861e-10    (0.9837%)
+b               = -1.10421e-06     +/- 1.916e-06    (173.5%)
+c               = 0.00564472       +/- 0.003135     (55.55%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.958  1.000 
+c               0.729 -0.838  1.000 

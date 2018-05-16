@@ -31,8 +31,21 @@ void ajouter_cellule(Lcircuit *liste_cellule, Cell_circuit *cel);
 
 void afficher_Lcircuit(Lcircuit *Lc);
 
+void afficher_Lcircuit_jmin_jmax(Lcircuit *Lc);
+
 void Graphe_Rec_Circuit(Graphe *H, Lcircuit *Lc);
 
 void CalculJminJmaxCEL(Cell_circuit *Cir);
 
 void CalculJminJmax(Lcircuit *LC);
+
+
+Cell_char * pluscourtchemin_apres_c(Solution *S, Cell_char *c, int j, int l, Cell_char** Tref);
+
+void Ajout_circuit_dans_solution(Cell_circuit *L, Solution *S, Cell_char *c, Cell_char **Tref, int* Jdroite);
+
+void algorithme_circuit_CasLigne1x1(Grille *G, Solution *S);
+
+void algorithme_circuit_CasLigne1x1(Grille *G, Solution *S);
+
+void afficheTREF(Cell_char** Tref, int n);
